@@ -1,39 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
   </head>
-  <body class="grid h-screen place-items-center">
-    <form
-      id="inputForm"
-      class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex align-baseline gap-x-4"
-    >
-      <span>
-        <label
-          class="block text-gray-700 text-sm font-bold mb-2"
-          for="customEnum"
+  <body
+    class="grid h-screen place-items-center dark dark:bg-slate-700 bg-green-300"
+  >
+    <div class="container grid gap-y-4">
+      <form
+        id="inputForm"
+        class="bg-white dark:bg-slate-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 flex align-baseline gap-x-4 max-w-fit mx-auto"
+      >
+        <span>
+          <label
+            class="block text-gray-400 text-sm font-bold mb-2"
+            for="customEnum"
+          >
+            Custom Enum
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="customEnum"
+            type="text"
+            placeholder="Add custom enum"
+            tabindex="0"
+          />
+        </span>
+        <span class="mt-auto">
+          <button
+            tabindex="0"
+            class="bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+            id="submitBtn"
+          >
+            Add
+          </button>
+        </span>
+      </form>
+      <section
+        class="dark:bg-slate-800 px-8 pt-6 pb-8 max-w-[416px] w-[416px] mx-auto text-gray-200"
+      >
+        <h2 class="font-semibold text-2xl mb-4">Enums</h2>
+        <ul
+          class="text-gray-400 grid justify-start align-baseline gap-y-2"
+          id="enumList"
         >
-          Custom Enum
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="customEnum"
-          type="text"
-          placeholder="Add custom enum"
-        />
-      </span>
-      <span class="mt-auto">
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="button"
-          id="submitBtn"
-        >
-          Add
-        </button>
-      </span>
-    </form>
+          <!-- <li>House Expenses</li>
+          <li>Party with Friends</li>
+          <li>Party with Colleagues</li> -->
+        </ul>
+      </section>
+    </div>
   </body>
 </html>
